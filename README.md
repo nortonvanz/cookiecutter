@@ -35,9 +35,9 @@ The directory structure of your new project looks like this:
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   ├── external       <- Data from third party sources.
+│   ├── external       <- Data from third party sources (web scraping, api data).
 │   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
+│   ├── processed      <- The final, canonical data sets for modeling (e.g train).
 │   └── raw            <- The original, immutable data dump.
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
@@ -46,7 +46,7 @@ The directory structure of your new project looks like this:
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│                         `1.0-nmv-initial-data-exploration`.
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -57,13 +57,13 @@ The directory structure of your new project looks like this:
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
+├── src                <- Source code for use in this project (deploy related).
 │   ├── __init__.py    <- Makes src a Python module
 │   │
-│   ├── data           <- Scripts to download or generate data
+│   ├── data           <- Scripts to download or generate data (train df)
 │   │   └── make_dataset.py
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
+│   ├── features       <- Scripts to turn raw data into features for modeling (pkl features)
 │   │   └── build_features.py
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
@@ -71,7 +71,7 @@ The directory structure of your new project looks like this:
 │   │   ├── predict_model.py
 │   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations (e.g Airflorw retraining measures)
 │       └── visualize.py
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
